@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
 
-const FormSchema = ({});
+const formSchema = mongoose.Schema({});
 
-userSchema.plugin(uniqueValidator);
+formSchema.plugin(uniqueValidator);
 
-module.exports = mongoose.model('Form', FormSchema);
+module.exports = mongoose.model('Form', formSchema);

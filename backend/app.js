@@ -9,8 +9,12 @@ require('dotenv').config();
 const mainRoute = require('./routes/main')
 
 mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true, useUnifiedTopology: true})
-.then(() => console.log('Connected to mongodb atlas');)
-.catch((err) => console.log(err););
+.then(() => {
+    console.log('Connected to mongodb atlas');
+})
+.catch((err) => {
+    console.log(err);
+});
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
