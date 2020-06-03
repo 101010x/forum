@@ -1,0 +1,15 @@
+.hr-style {
+    border-top: 3px solid black;
+}
+
+.bold-title {
+    font-family: 'Playfair Display', serif;
+}
+
+.top {
+    background-color: #f2f2f2;
+}
+
+/* .reason .reasons {
+    display: none;
+} */
