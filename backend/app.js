@@ -6,7 +6,8 @@ const mongoose = require('mongoose');
 const path = require('path');
 require('dotenv').config();
 
-const mainRoute = require('./routes/main')
+const mainRoute = require('./routes/main');
+const userRoute = require('./routes/user');
 
 mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => {
@@ -27,6 +28,7 @@ app.use(bodyParser.json());
 
 
 app.use('/api/questionnaire', mainRoute);
+app.use('/api/users', userRoute);
 
 
 module.exports = app;
